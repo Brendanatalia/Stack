@@ -11,6 +11,18 @@ struct stack{
 	char top=-1;
 	int data[max];
 };
+void push(int x){
+data[top++]=x;
+}
+
+void pop(){
+	if(top==-1){
+		cout<<"Tidak dapat ditambah";
+	}
+	else{
+		top--;
+	}
+}
 
 int main(){
 
