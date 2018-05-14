@@ -64,4 +64,44 @@ char oprtr(char a){
 
 int main(){
 
+	int hsl,p;
+	char opr;
+	string b,c;
+	stack q;
+	cout<<"Masukkan infix \t: ";
+	cin>>b;
+	cout<<endl;
+	p=b.length();
+	for(int i=0;i<p;i++){
+	if (b[i] >= '0' && b[i] <= '9'){
+		c+=b[i];
+	}
+	else if (b[i] ==  '('){
+		q.push(b[i]);
+	}
+	else if (b[i] == ')'){
+		while (q.kosong() != 1 && q.atas() != '('){
+			char d=q.atas();
+			q.pop();
+			c+=d;
+		}
+		if (q.atas() == '('){
+			q.pop();
+		}
+	}
+	if (b[i] == '+' || b[i] == '-' || b[i] == '*' || b[i] == '/'){
+		if (q.kosong() == 1 || q.atas() == '('){
+			q.push(b[i]);
+		}
+		
+	else{
+		while (q.kosong() != 1 && q.atas() != '(' && Operator(b[i]) <= Operator(q.atas())){
+			char d=q.atas();
+			q.pop();
+			c+=d;
+		}
+		q.push(b[i]);
+		}	
+	}
+}
 }
