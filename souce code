@@ -5,23 +5,31 @@
 
 #include<iostream>
 using namespace std;
-#define max 100
 
 struct stack{
 	char top=-1;
-	int data[max];
-};
-void push(int x){
-data[top++]=x;
+	 char data[100];
+	
+	void push(int x){
+		data[top++]=x;
 }
 
-void pop(){
+int pop(){
 	if(top==-1){
-		cout<<"Tidak dapat ditambah";
+		cout<<"Tidak dapat dipop";
+		return top;
 	}
 	else{
 		top--;
 	}
+}
+
+int push(char x){
+	if(top==100-1){
+		cout<<"Stack penuh";
+		return top;
+	}
+	data[++top]=x;
 }
 
 int atas(){
