@@ -63,7 +63,7 @@ char oprtr(char a){
 }
 
 int main(){
-
+	cout<<"-------------------------------------------------------------------------------------------------"<<endl;
 	int hsl,p;
 	char opr;
 	string b,c;
@@ -114,7 +114,7 @@ for(int i=0;i<=p;i++){
 if (c[i] >= '0' && c[i] <= '9'){
 	q.push(c[i]);
 }
-}
+
 if( c[i]=='+' || c[i]=='-' || c[i]=='*' || c[i]=='/' ){
 	int z=q.atas()-'0';
 	q.pop();
@@ -125,4 +125,29 @@ if( c[i]=='+' || c[i]=='-' || c[i]=='*' || c[i]=='/' ){
 		char hasil=hsl+'0';
 		q.push(hasil);
 		}
-		else if()
+		else if(c[i]=='-'){
+		hsl=y-z;
+		char hasil=hsl+'0';
+		q.push(hasil);
+			
+	}
+	else if(c[i]=='*'){
+		hsl=y*z;
+		char hasil=hsl+'0';
+		q.push(hasil);
+	}
+	else if(c[i]=='/'){
+		hsl=y/z;
+		char hasil=hsl+'0';
+		q.push(hasil);
+	}
+		
+}
+
+}
+
+char Hasil=q.atas();
+int HasilAkhir=Hasil-'0';
+cout<<"Hasil \t\t: "<<HasilAkhir<<endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+}
