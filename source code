@@ -104,4 +104,14 @@ int main(){
 		}	
 	}
 }
+while(q.kosong() != 1){
+		char d=q.atas();
+		q.pop();
+		c+=d;
+			}
+cout<<"Bentuk Postfix \t: "<<c<<endl<<endl;
+for(int i=0;i<=p;i++){
+if (c[i] >= '0' && c[i] <= '9'){
+	q.push(c[i]);
+}
 }
