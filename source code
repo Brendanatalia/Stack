@@ -115,3 +115,14 @@ if (c[i] >= '0' && c[i] <= '9'){
 	q.push(c[i]);
 }
 }
+if( c[i]=='+' || c[i]=='-' || c[i]=='*' || c[i]=='/' ){
+	int z=q.atas()-'0';
+	q.pop();
+	int y=q.atas()-'0';
+	q.pop();
+	if(c[i]=='+'){
+		hsl=y+z;
+		char hasil=hsl+'0';
+		q.push(hasil);
+		}
+		else if()
